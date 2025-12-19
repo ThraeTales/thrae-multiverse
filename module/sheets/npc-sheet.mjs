@@ -302,7 +302,7 @@ export class MarvelMultiverseNPCSheet extends ActorSheet {
       !this.actor.items.map((item) => item.name).includes(traitData.name) &&
       !traitData.multiple
     ) {
-      await super._onDropItemCreate(traitData);
+      super._onDropItemCreate(traitData);
     }
   }
 
@@ -311,7 +311,7 @@ export class MarvelMultiverseNPCSheet extends ActorSheet {
       !this.actor.items.map((item) => item.name).includes(tagData.name) &&
       !tagData.multiple
     ) {
-      await super._onDropItemCreate(tagData);
+      super._onDropItemCreate(tagData);
     }
   }
 
@@ -330,19 +330,20 @@ export class MarvelMultiverseNPCSheet extends ActorSheet {
 
       if (itemData.type === "occupation") {
         for (const tag of itemData.system.tags) {
-          await this._createTag(tag);
+          this._createTag(tag);
         }
         for (const trait of itemData.system.traits) {
-          await this._createTrait(trait);
+          this._createTrait(trait);
         }
         // create the occupation
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else if (itemData.type === "origin") {
         for (const tag of itemData.system.tags) {
-          await this._createTag(tag);
+          this._createTag(tag);
         }
         for (const trait of itemData.system.traits) {
-          await this._createTrait(trait);
+          this._createTrait(trait);
         }
         for (const power of itemData.system.powers) {
           const newItemData = {
@@ -359,12 +360,14 @@ export class MarvelMultiverseNPCSheet extends ActorSheet {
         }
         // create the origin
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else if (
         itemData.type === "trait" &&
         ["Big", "Small"].includes(itemData.name)
       ) {
         this._changeSizeEffect(itemData.name.toLowerCase());
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else {
         return super._onDropItemCreate(itemData);
       }

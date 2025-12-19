@@ -4,14 +4,14 @@
   "description": "The Marvel Multiverse system for FoundryVTT!",
   "authors": [
     {
-      "name": "Thrae Braybuck",
-      "discord": "ThraeTales"
+      "name": "mjording",
+      "discord": "mjording"
     }
   ],
-  "url": "https://github.com/ThraeTales/thrae-multiverse",
+  "url": "https://github.com/mjording/marvel-multiverse/",
   "license": "LICENSE.txt",
   "readme": "README.md",
-  "bugs": "https://github.com/ThraeTales/thrae-multiverse/issues",
+  "bugs": "Replace this with a link to file issues or tickets",
   "changelog": "CHANGELOG.md",
   "media": [
     {
@@ -28,7 +28,7 @@
   "version": "2.2.0",
   "compatibility": {
     "minimum": 12,
-    "verified": "13"
+    "verified": "12.328"
   },
   "esmodules": [
     "marvel-multiverse.mjs"
@@ -115,8 +115,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/ThraeTales/thrae-multiverse/main/system.json",
-  "download": "https://github.com/ThraeTales/thrae-multiverse/releases/download/release-2.2.0/marvel-multiverse-release-2.2.0.zip",
+  "manifest": "https://raw.githubusercontent.com/mjording/marvel-multiverse/main/system.json",
+  "download": "https://github.com/mjording/marvel-multiverse/releases/download/release-2.2.0/marvel-multiverse-release-2.2.0.zip",
   "background": "systems/marvel-multiverse/ui/official/mmrpg-background.webp",
   "grid": {
     "distance": 5,
