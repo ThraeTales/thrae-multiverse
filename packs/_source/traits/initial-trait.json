@@ -1,0 +1,9 @@
+{
+  "_id": "tst0000000000001",
+  "name": "Initial Trait",
+  "type": "trait",
+  "system": {},
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "_key": "!items!tst0000000000001"
+}
