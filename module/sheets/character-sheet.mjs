@@ -291,7 +291,7 @@ export class MarvelMultiverseCharacterSheet extends ActorSheet {
       !this.actor.items.map((item) => item.name).includes(traitData.name) &&
       !traitData.multiple
     ) {
-      await super._onDropItemCreate(traitData);
+      super._onDropItemCreate(traitData);
     }
   }
 
@@ -300,13 +300,13 @@ export class MarvelMultiverseCharacterSheet extends ActorSheet {
       !this.actor.items.map((item) => item.name).includes(tagData.name) &&
       !tagData.multiple
     ) {
-      await super._onDropItemCreate(tagData);
+      super._onDropItemCreate(tagData);
     }
   }
 
   /** Fired whenever an embedded document is created.
    */
-  async _onDropItemCreate(itemData) {
+  _onDropItemCreate(itemData) {
     if (!this.actor.items.map((item) => item.name).includes(itemData.name)) {
       if (
         itemData.type === "power" &&
@@ -318,22 +318,28 @@ export class MarvelMultiverseCharacterSheet extends ActorSheet {
       }
 
       if (itemData.type === "occupation") {
-        for (const tag of itemData.system.tags) {
-          await this._createTag(tag);
-        }
-        for (const trait of itemData.system.traits) {
-          await this._createTrait(trait);
-        }
+        // biome-ignore lint/complexity/noForEach: <explanation>
+        itemData.system.tags.forEach(async (tag) => {
+          this._createTag(tag);
+        });
+        // biome-ignore lint/complexity/noForEach: <explanation>
+        itemData.system.traits.forEach(async (trait) => {
+          this._createTrait(trait);
+        });
         // create the occupation
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else if (itemData.type === "origin") {
-        for (const tag of itemData.system.tags) {
-          await this._createTag(tag);
-        }
-        for (const trait of itemData.system.traits) {
-          await this._createTrait(trait);
-        }
-        for (const power of itemData.system.powers) {
+        // biome-ignore lint/complexity/noForEach: <explanation>
+        itemData.system.tags.forEach(async (tag) => {
+          this._createTag(tag);
+        });
+        // biome-ignore lint/complexity/noForEach: <explanation>
+        itemData.system.traits.forEach(async (trait) => {
+          this._createTrait(trait);
+        });
+        // biome-ignore lint/complexity/noForEach: <explanation>
+        itemData.system.powers.forEach(async (power) => {
           const newItemData = {
             name: power.name,
             type: "power",
@@ -345,15 +351,17 @@ export class MarvelMultiverseCharacterSheet extends ActorSheet {
             });
           }
           await Item.create(newItemData, { parent: this.actor });
-        }
+        });
         // create the origin
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else if (
         itemData.type === "trait" &&
         ["Big", "Small"].includes(itemData.name)
       ) {
         this._changeSizeEffect(itemData.name.toLowerCase());
         return super._onDropItemCreate(itemData);
+        // biome-ignore lint/style/noUselessElse: <explanation>
       } else {
         return super._onDropItemCreate(itemData);
       }
