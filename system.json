@@ -115,8 +115,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/ThraeTales/thrae-multiverse/main/system.json",
-  "download": "https://github.com/ThraeTales/thrae-multiverse/releases/download/release-2.2.0/marvel-multiverse-release-2.2.0.zip",
+  "manifest": "https://github.com/ThraeTales/thrae-multiverse/releases/latest/download/system.json",
+  "download": "https://github.com/ThraeTales/thrae-multiverse/releases/download/release-2.2.0/thrae-multiverse.zip",
   "background": "systems/marvel-multiverse/ui/official/mmrpg-background.webp",
   "grid": {
     "distance": 5,

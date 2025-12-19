@@ -21,9 +21,9 @@ To install and use the  Marvel Multiverse Role Playing Game system for Foundry V
 ![Foundry v12](https://img.shields.io/badge/foundry-v12-green) ![Foundry v13](https://img.shields.io/badge/foundry-v13-green).
 
 ### Easy Install ###
-In your foundry setup page copy and paste the following Link into the **Install System** dialog on the Setup menu of the application.
+In your Foundry setup page, copy and paste the following Link into the **Manifest URL** field of the **Install System** dialog on the Setup menu of the application.
 
-[system file](https://raw.githubusercontent.com/ThraeTales/thrae-multiverse/master/system.json)
+https://github.com/ThraeTales/thrae-multiverse/releases/latest/download/system.json
 
 Updates are released often, if you upgrade and discover an issue please submit it 
 
