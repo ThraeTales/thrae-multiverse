@@ -28,7 +28,7 @@
   "version": "2.2.0",
   "compatibility": {
     "minimum": 12,
-    "verified": "12.328"
+    "verified": "13"
   },
   "esmodules": [
     "marvel-multiverse.mjs"
