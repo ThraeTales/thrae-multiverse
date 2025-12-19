@@ -23,8 +23,9 @@
   "private": true,
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.1",
-    "@foundryvtt/foundryvtt-cli": "^1.1.0",
+    "@foundryvtt/foundryvtt-cli": "^3.0.2",
     "@rollup/plugin-node-resolve": "^15.2.1",
+    "classic-level": "^3.0.0",
     "eslint-plugin-jsdoc": "^48.11.0",
     "fancy-log": "^2.0.0",
     "rollup": "^3.29.5",
