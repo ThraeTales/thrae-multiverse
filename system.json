@@ -25,7 +25,7 @@
       "thumbnail": "systems/marvel-multiverse/ui/official/mmrpg-setup-thumbnail.png"
     }
   ],
-  "version": "2.2.0",
+  "version": "2.2.1",
   "compatibility": {
     "minimum": 12,
     "verified": "13"
@@ -116,7 +116,7 @@
   ],
   "socket": true,
   "manifest": "https://github.com/ThraeTales/thrae-multiverse/releases/latest/download/system.json",
-  "download": "https://github.com/ThraeTales/thrae-multiverse/releases/download/release-2.2.0/thrae-multiverse.zip",
+  "download": "https://github.com/ThraeTales/thrae-multiverse/releases/download/v2.2.1/thrae-multiverse.zip",
   "background": "systems/marvel-multiverse/ui/official/mmrpg-background.webp",
   "grid": {
     "distance": 5,
